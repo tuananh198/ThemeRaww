@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <referenceContainer name="header.panel.wrapper">
+				<referenceContainer name="header.panel">
+                    <referenceBlock name="store_language" remove="true" />
+					<referenceBlock name="wish-list-link" remove="true" />
+					<referenceBlock name="header" remove="true" />
+					<referenceBlock name="register-link" remove="true" />
+					<referenceBlock name="authorization-link" remove="true" />
+					<referenceBlock name="header" remove="true" />
+                    <referenceBlock class="Magento\Customer\Block\Account\Navigation" name="top.links">
+                        <block class="Magento\Framework\View\Element\Template" name="ship-to-aus" template="Magento_Theme::ship_to_aus.phtml" before="-" />
+                        <block class="Magento\Framework\View\Element\Template" name="tittle-top" template="Magento_Theme::tittle_top.phtml" before="-" />
+                        <block class="Magento\Framework\View\Element\Template" name="about-raww" template="Magento_Theme::about_raww.phtml" before="-" />
+                    </referenceBlock>
+				</referenceContainer>
+			</referenceContainer>
+        </referenceContainer>
+            <!-- <move element="catalog.topnav" destination="header.container" as="new_alias" after="-"/> -->
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="header-bottom-list" template="Magento_Theme::header-bottom-list.phtml" after="catalog.topnav" />
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+        <block class="Magento\Framework\View\Element\Template" name="list-icon-bottom" template="Magento_Theme::list-icon-bottom.phtml" before="-"/>
+            <referenceContainer name="footer" htmlTag="div" htmlClass="footer-link">
+                <referenceBlock name="footer_links" remove="true"/>   
+                <container name="list-footer" htmlTag="div" htmlClass="list-link-footer-parent">
+                    <container name="list-icon" htmlTag="div" htmlClass="subscribe-to-newsletter">
+                        <container name="content-container" htmlTag="div" htmlClass="content-container">
+                            <block class="Magento\Framework\View\Element\Template" name="subscribe-new-letter" template="Magento_Theme::subscribe-new-letter.phtml"/>
+                            <block class="Magento\Framework\View\Element\Template" name="list-icon-footer" template="Magento_Theme::list-icon-footer.phtml"/>
+                        </container>
+                    </container>    
+                    <block class="Magento\Framework\View\Element\Template" name="list-link-footer" template="Magento_Theme::list-link-footer.phtml"/>
+                </container>
+                <block class="Magento\Framework\View\Element\Template" name="copyright-bottom" template="Magento_Theme::copyright-bottom.phtml"/>
+                <referenceBlock name="copyright" remove="true"/>
+                <referenceBlock name="report.bugs" remove="true"/>
+            </referenceContainer >
+        </referenceContainer>
+        <move element="form.subscribe" destination="content-container" before="list-icon-footer"/>
+    </body>
+</page>

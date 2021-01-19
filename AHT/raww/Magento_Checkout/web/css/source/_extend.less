@@ -1,0 +1,16 @@
+& when (@media-common =true) {
+    .icon-left-cart {
+        float: right;
+        >li {
+            float: left;
+            &:nth-of-type(1) {
+                margin-right: 20px;
+            }
+        }
+        }
+        .minicart-wrapper .action.showcart:before {
+            font-family: 'Line Awesome Free';
+            content: "\f290";
+            font-weight: 900;
+        }
+}

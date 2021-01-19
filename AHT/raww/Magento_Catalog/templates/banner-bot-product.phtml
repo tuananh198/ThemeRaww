@@ -1,0 +1,43 @@
+<div class="banner-bot-product">
+    <div class="tittle-list">
+        <h2>
+            <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('tittle-product-banner')
+
+            ->toHtml();
+            
+            ?> 
+    </h2>
+    <h3>
+            <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('desc-product-banner')
+
+            ->toHtml();
+
+            ?>
+        </h3>
+        <div class="tittle-list-icon">
+            <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('tittle-list-icon')
+
+            ->toHtml();
+
+            ?>
+        </div>
+    </div>
+</div>

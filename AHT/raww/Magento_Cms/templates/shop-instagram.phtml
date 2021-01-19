@@ -1,0 +1,67 @@
+<div class="shop-instagram">
+    <h2>
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('shop-instagram')
+
+        ->toHtml();
+        
+        ?> 
+   </h2>
+   <h3>
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('shop-instagram-tittle')
+
+        ->toHtml();
+
+        ?>
+    </h3>
+    <div class="shop-instagram-list">
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('shop-instagram-list')
+
+        ->toHtml();
+
+        ?>
+    </div>
+    <div class="shop-instagram-list">
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('shop-instagram-list-2')
+
+        ->toHtml();
+
+        ?>
+    </div>
+    <button type="button" class="shop-instagram-button">
+        <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('shop-instagram-button')
+
+            ->toHtml();
+
+        ?>
+    </button>
+</div>

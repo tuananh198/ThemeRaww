@@ -1,0 +1,44 @@
+& when (@media-common =true) {
+    .swatch-attribute-label {
+        display: none;
+    }
+    .swatch-attribute {
+        display: inline-block;
+        .swatch-option.color {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border: 0px;
+            &:hover {
+                outline: 0px;
+            }
+            .swatch-attribute-options {
+                display: inline-block;
+            }
+            .swatch-more {
+                .mixin-style(@color: @color-black-text, @font-size: 14px, @font-family: @font-family-name__base__avenir);
+                line-height: 28px;
+            }
+        }
+    }
+    .page-product-configurable {
+        .swatch-opt {
+            margin: 0;
+        }
+        .color .swatch-option {
+            &.selected {
+                outline: none;
+            }
+        }
+        .swatch-attribute-selected-option {
+            display: none;
+        }
+        .color .swatch-select {
+            margin-top: 20px;
+            height: 50px;
+        }
+        .color .swatch-attribute-options {
+            margin: 0;
+        }
+    }
+}        

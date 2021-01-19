@@ -1,0 +1,67 @@
+<div class="tittle-list">
+    <h2>
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('tittle-list-text')
+
+        ->toHtml();
+        
+        ?> 
+   </h2>
+   <h3>
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('tittle-list-text-mini')
+
+        ->toHtml();
+
+        ?>
+    </h3>
+    <div class="tittle-list-icon">
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('tittle-list-icon')
+
+        ->toHtml();
+
+        ?>
+    </div>
+    <div class="tittle-list-icon">
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('tittle-list-icon-2')
+
+        ->toHtml();
+
+        ?>
+    </div>
+    <button type="button" class="button">
+        <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('tittle-list-button')
+
+            ->toHtml();
+
+        ?>
+    </button>
+</div>

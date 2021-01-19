@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+         <block class="Magento\Framework\View\Element\Template" name="banner-top" template="Magento_Cms::banner-top.phtml" after="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="mini-banner" template="Magento_Cms::mini-banner.phtml" after="banner-top"/>
+            <block class="Magento\Framework\View\Element\Template" name="tittle-list" template="Magento_Cms::tittle-list.phtml" after="mini-banner"/>    
+            <block class="Magento\Framework\View\Element\Template" name="raww-favourites" template="Magento_Cms::raww-favourites.phtml" after="tittle-list"/>
+            <block class="Magento\Framework\View\Element\Template" name="shop-instagram" template="Magento_Cms::shop-instagram.phtml" after="raww-favourites"/>
+            <container name="subform" htmlTag="div" htmlClass="email-sub" after="shop-instagram">
+                <block class="Magento\Framework\View\Element\Template" name="subscribe-container" template="Magento_Cms::subscribe-container.phtml"/>
+            </container>
+        </referenceContainer>
+            <move element="form.subscribe" destination="subform" as="new_alias.form"/>
+    </body>
+</page>

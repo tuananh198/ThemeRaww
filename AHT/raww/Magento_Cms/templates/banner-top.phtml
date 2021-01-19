@@ -1,0 +1,56 @@
+<div class="banner-top">
+    <div>
+        <?php
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId('banner-top')
+
+        ->toHtml();
+
+        ?>
+    </div>
+    <div class="banner-top-desc">
+        <div class="banner-top-tittle">
+            <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('banner-top-tittle')
+
+            ->toHtml();
+
+            ?>
+        </div>
+        <div class="banner-top-tittle-detail">
+            <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('banner-top-tittle-detail')
+
+            ->toHtml();
+
+            ?>
+        </div>
+        <button class="banner-top-tittle-button">
+            <?php
+
+            echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('banner-top-tittle-button')
+
+            ->toHtml();
+
+            ?>
+        </button>
+    </div>
+</div>

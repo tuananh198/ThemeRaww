@@ -1,0 +1,29 @@
+<div class="mini-banner">
+    <div class="mini-banner-content">
+        <?php
+        for ($i=1; $i <= 3; $i++) { 
+        ?>
+        <div>
+        <?php
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId("mini-banner-img-".$i)
+
+        ->toHtml();
+
+        echo $block->getLayout()
+
+        ->createBlock('Magento\Cms\Block\Block')
+
+        ->setBlockId("mini-banner-text-".$i)
+
+        ->toHtml();
+        ?>
+        </div>
+        <?php
+        }
+        ?>
+    </div>
+</div>

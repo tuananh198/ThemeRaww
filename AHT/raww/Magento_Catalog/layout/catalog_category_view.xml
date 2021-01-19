@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="columns.top">
+            <block class="Magento\Framework\View\Element\Template" name="list-item-category" template="Magento_Catalog::list-item-category.phtml" after="-" />
+        </referenceContainer>
+        <referenceBlock name="page.main.title">
+            <block class="Magento\Framework\View\Element\Template" name="tittle-desc-list" template="Magento_Catalog::tittle-desc-list.phtml" before="-" />  
+            <block class="Magento\Catalog\Block\Category\Rss\Link" name="rss.link" template="Magento_Catalog::category/rss.phtml"/>
+        </referenceBlock>
+    </body>
+</page>
