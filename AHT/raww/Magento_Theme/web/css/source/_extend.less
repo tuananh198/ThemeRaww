@@ -81,7 +81,7 @@
             .list-link-footer {
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
+                // margin: 0 auto;
                 flex-wrap: wrap;
                 .item-child {
                     h2 {
@@ -125,6 +125,7 @@
             display: flex;
             justify-content: space-between;
             li {
+                margin: 0 auto;
                 a {
                     display: flex;
                     align-items: center;
@@ -222,6 +223,9 @@
     .list-link-footer-parent {
         padding-top: 30px;
     }
+    .list-link-footer {
+        padding-left: 10px;
+    }
 }
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .logo {
@@ -262,12 +266,17 @@
         padding-bottom: 60px;
     }
     .list-link-footer-parent {
-        padding: 55px 0 40px 10px;
+        padding: 55px 10px 40px 10px;
     }
     .copyright-bottom {
         padding-top: 40px;
         display: flex;
         justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .list-link-footer {
+        width: 100%;
     }
 
 }

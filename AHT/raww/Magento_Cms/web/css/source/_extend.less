@@ -42,7 +42,7 @@
             .mini-banner-content{
                     display: flex;
                     justify-content: space-between;
-                    max-width: 1270px;
+                    max-width: 1240px;
                     margin: 0 auto;
                     padding: 5% 15px;
                     >div {
@@ -383,9 +383,12 @@
     }
     .tittle-list-icon {
         >ul {
-            justify-content: space-between;
+            justify-content: space-around;
             >li {
                 display: flex;
+                &:nth-of-type(1) {
+                    display: none;
+                }
            }
         }
     }
@@ -400,7 +403,12 @@
         margin: 95px auto 60px;
         max-width: 1240px;
         .shop-instagram-list {
-            justify-content: space-between;
+            ul {
+             justify-content: space-around;
+             >li:nth-of-type(1) {
+                 display: none;
+             }
+            }
         }
     }
     .mini-banner-content {
@@ -447,6 +455,21 @@
         .banner-top-tittle-button {
             width: 150px;
             height: 50px;
+        }
+    }
+    .tittle-list-icon {
+        >ul {
+            justify-content: space-between;
+        }
+    }
+    .shop-instagram {
+        .shop-instagram-list {
+            ul {
+             justify-content: space-between;
+             >li:nth-of-type(1) {
+                 display: flex;
+             }
+            }
         }
     }
 }

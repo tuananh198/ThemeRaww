@@ -20,5 +20,6 @@
                 <block class="Magento\Framework\View\Element\Template" name="banner-bot-product" template="Magento_Catalog::banner-bot-product.phtml" after="-" />
             </referenceContainer>
             <move element="banner-bot-product" destination="page.wrapper" before="page.bottom.container"/>
+            <move element="content.aside" destination="page.wrapper" after="page.bottom.container"/>
     </body>
 </page>
