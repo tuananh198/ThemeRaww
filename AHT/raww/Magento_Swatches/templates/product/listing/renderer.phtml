@@ -7,7 +7,7 @@
 <?php
 /** @var $block \Magento\Swatches\Block\Product\Renderer\Listing\Configurable */
 $productId = $block->getProduct()->getId();
-$dem = count(json_decode($block->getJsonConfig(), true)['attributes'][93]['options']) - 5;
+$dem = count(json_decode($block->getJsonConfig(), true)['attributes'][93]['options']) - 3;
 /** @var \Magento\Swatches\ViewModel\Product\Renderer\Configurable $configurableViewModel */
 $configurableViewModel = $block->getConfigurableViewModel()
 ?>
@@ -21,7 +21,7 @@ $configurableViewModel = $block->getConfigurableViewModel()
                 "selectorProduct": ".product-item-details",
                 "onlySwatches": true,
                 "enableControlLabel": false,
-                "numberToShow": 5,
+                "numberToShow": 3,
                 "moreButtonText": <?= $dem ?>,
                 "jsonConfig": <?= /* @noEscape */ $block->getJsonConfig() ?>,
                 "jsonSwatchConfig": <?= /* @noEscape */ $block->getJsonSwatchConfig() ?>,

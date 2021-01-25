@@ -42,7 +42,7 @@ switch ($type = $block->getType()) {
             $class = $type;
 
             $image = 'related_products_list';
-            $title = __('Goes well with');
+            $title = __('Goes with up');
             $items = $block->getItems();
             $limit = 0;
             $shuffle = 0;
@@ -239,26 +239,22 @@ $_item = null;
                                         <?php // phpcs:disable ?>
                                         <div class="product actions product-item-actions">
                                             <?php if ($showCart):?>
-                                                <?php if ($_item->isSaleable()):?>
-                                                    <div class="box-tocart">
-                                                        <div class="fieldset">
-                                                            <div class="field qty">
+                                                <div class="field qty">
                                                                 <div class="control">
-                                                                    <span class="minus-btn qty-btn">-</span>
+                                                                <span class="minus-btn qty-btn">-</span>
                                                                     <input type="number"
                                                                         name="qty"
                                                                         id="qty"
                                                                         min="0"
-                                                                        value="<?= $block->getProductDefaultQty() * 1 ?>"
+                                                                        value="1"
                                                                         title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
                                                                         class="input-text qty"
                                                                         data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
                                                                         />
-                                                                    <span class="plus-btn qty-btn">+</span>
+                                                                <span class="plus-btn qty-btn">+</span>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                <?php if ($_item->isSaleable()):?>
                                                     <div class="actions-primary">
                                                     <?php if (!$_item->getTypeInstance()->isPossibleBuyFromList($_item)):?>
                                                         <button
@@ -338,11 +334,9 @@ $_item = null;
             </script>
         <?php endif;?>
         <?php endif;?>
+   
         <script>
-    require([
-        'jquery',
-        'slick'
-    ], function ($) {
+function ($) {
         $(document).ready(function () {
             $(".product-items").slick({
                 infinite: true,
