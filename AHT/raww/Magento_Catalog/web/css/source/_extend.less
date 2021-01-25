@@ -551,6 +551,11 @@
             display: none!important;
         }
     }
+    .cms-home {
+        .products-grid {
+            padding-left: 3px;
+        }
+    }
 }
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .block-content {
@@ -752,7 +757,7 @@
     .products-related {
         .slick-prev {
             top: 0;
-            left: -25px;
+            left: -23px;
         }
         .slick-next {
             top: 0;
@@ -817,6 +822,17 @@
                     display: flex;
                 }
             }
+        }
+    }
+    .products-related {
+        .slick-prev {
+            top: 0;
+            left: 5px;
+        }
+    }
+    .cms-home {
+        .products-grid {
+            padding-left: 20px;
         }
     }
 }

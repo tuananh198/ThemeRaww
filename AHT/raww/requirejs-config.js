@@ -1,5 +1,5 @@
 var config = {
-    deps:['Magento_Catalog/js/slick'],
+    deps:['Magento_Theme/js/slick'],
     map: {
         '*': {
             'qty-counter': 'Magento_Catalog/js/qty-counter'
